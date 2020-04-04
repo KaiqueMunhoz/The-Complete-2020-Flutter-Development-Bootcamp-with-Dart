@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+
+// Screens
+import '../screens/new_task.dart';
+
+// Widgets
 import '../widgets/tasks_list.dart';
 
 class TasksScreen extends StatelessWidget {
@@ -60,7 +65,8 @@ class TasksScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => showModalBottomSheet(
+            context: context, builder: (context) => NewTask()),
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(
           Icons.add,
